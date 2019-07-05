@@ -1,0 +1,36 @@
+{{yield}}
+
+<table>
+  <thead>
+    <th>
+      Contact Form
+    </th>
+  </thead>
+  <tr>
+    <td><label>First name:</label></td>
+  </tr>
+  <tr>
+    <td>{{input value=firstName required=true placeholder="Please enter your name here"}}</td>
+  </tr>
+  <tr>
+    <td><label>Surname:</label></td>
+  </tr>
+  <tr>
+    <td>{{input value=surName placeholder="Please enter your last name here"}}</td>
+  </tr>
+  <tr>
+    <td><label>Phone Number:</label></td>
+  </tr>
+  <tr>
+    <td>{{input value=phoneNumber placeholder="Please enter your phone number here"}}</td>
+  </tr>
+  <tr>
+    <td><label>Mobile Number:</label></td>
+  </tr>
+  <tr>
+    <td>{{input value=mobileNumber placeholder="Please enter your mobile number here"}}</td>
+  </tr>
+  <tr>
+    <td><button class="button" {{action 'addContact'}}> Add </button></td>
+  </tr>
+</table>
