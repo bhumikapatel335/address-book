@@ -1,36 +1,67 @@
 {{yield}}
 
 <table>
+
   <thead>
     <th>
       Add Contact
     </th>
   </thead>
+
   <tr>
     <td><label>First name:</label></td>
   </tr>
+
   <tr>
-    <td>{{input value=firstName required=true placeholder="Please enter your name here"}}</td>
+    <td>
+      {{input value=firstName placeholder="Please enter your name here"}}
+      {{#each errors.firstName as |error|}}
+        <span class="error-message">{{error.message}}</span>
+      {{/each}}
+    </td>
   </tr>
+
   <tr>
     <td><label>Surname:</label></td>
   </tr>
+
   <tr>
-    <td>{{input value=surName placeholder="Please enter your last name here"}}</td>
+    <td>
+      {{input value=surname placeholder="Please enter your last name here"}}
+      {{#each errors.surname as |error|}}
+        <span class="error-message">{{error.message}}</span>
+      {{/each}}
+    </td>
   </tr>
+
   <tr>
     <td><label>Phone Number:</label></td>
   </tr>
+
   <tr>
-    <td>{{input value=phoneNumber placeholder="Please enter your phone number here"}}</td>
+    <td>
+      {{input value=phoneNumber placeholder="Please enter your phone number here"}}
+      {{#each errors.phoneNumber as |error|}}
+        <span class="error-message">{{error.message}}</span>
+      {{/each}}
+    </td>
   </tr>
+
   <tr>
     <td><label>Mobile Number:</label></td>
   </tr>
+
   <tr>
-    <td>{{input value=mobileNumber placeholder="Please enter your mobile number here"}}</td>
+    <td>
+      {{input value=mobileNumber placeholder="Please enter your mobile number here"}}
+      {{#each errors.mobileNumber as |error|}}
+        <span class="error-message">{{error.message}}</span>
+      {{/each}}
+    </td>
   </tr>
+
   <tr>
     <td><button class="button" {{action 'addContact'}}> Add </button></td>
   </tr>
+
 </table>

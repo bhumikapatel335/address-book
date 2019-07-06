@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    addContact: function(firstName, surName, phoneNumber, mobileNumber) {
+    addContact: function(firstName, surname, phoneNumber, mobileNumber) {
       var contact = this.store.createRecord('contact', {
         firstName: firstName,
-        surName: surName,
+        surname: surname,
         phoneNumber: phoneNumber,
         mobileNumber: mobileNumber
       });

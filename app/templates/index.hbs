@@ -2,12 +2,15 @@
   {{add-contact addContact=(action "addContact")}}
 </form>
 <div>
+
   <table border="1">
+
     <thead>
       <tr>
         <th colspan="5">My Contacts</th>
       </tr>
     </thead>
+
     <thead>
       <tr>
         <th>Full Name</th>
@@ -16,15 +19,18 @@
         <th>Actions</th>
       </tr>
     </thead>
+
     {{#each model as |contact|}}
       <tbody>
         <tr>
-          <td>{{contact.firstName}} {{contact.surName}}</td>
+          <td>{{contact.firstName}} {{contact.surname}}</td>
           <td>{{contact.phoneNumber}}</td>
           <td>{{contact.mobileNumber}}</td>
           <td><button {{action 'deleteContact' contact}} class="button"> Delete </button></td>
         </tr>
       </tbody>
     {{/each}}
+
   </table>
+
 </div>

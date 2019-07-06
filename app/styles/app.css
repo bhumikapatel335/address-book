@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 div {
@@ -67,4 +68,9 @@ table tr {
 
 tbody tr:hover {
   background-color: #ddd;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
 }
